@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "searchBar":"/components/searchBar/searchBar",
+    "indexModule":"/components/indexModule/indexModule"
+  }
+}

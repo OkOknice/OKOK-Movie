@@ -1,0 +1,27 @@
+<view class="item-rate">
+    <image 
+        class="image"
+        wx:for="{{lights}}" 
+        style="width:{{starsize}}rpx;height:{{starsize}}rpx;"
+        src="/images/rate_light.png" 
+        wx:key="index"
+    ></image>
+    <image 
+        class="image"
+        wx:for="{{halfs}}" 
+        style="width:{{starsize}}rpx;height:{{starsize}}rpx;"
+        src="/images/rate_half.png" 
+        wx:key="index"
+    ></image>
+    <image 
+        class="image"
+        wx:for="{{garys}}" 
+        style="width:{{starsize}}rpx;height:{{starsize}}rpx;"
+        src="/images/rate_gray.png" 
+        wx:key="index"
+    ></image>
+    <text
+        style='font-size:{{fontsize}}rpx;color:{{fontcolor}};'
+        wx:if="{{isText}}"
+    >{{rateText}}</text>
+</view>

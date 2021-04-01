@@ -1,0 +1,9 @@
+<searchBar isNavigator="{{true}}"></searchBar>
+<view class="list-wrapper">
+    <itemViews 
+        wx:for="{{items}}" 
+        wx:key="index" 
+        item="{{item}}"
+        itemUrl="/pages/detail/detail?type={{type}}&id={{item.id}}"
+    ></itemViews>
+</view>

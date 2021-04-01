@@ -1,0 +1,57 @@
+<view class="detail-wrapper">
+    <view class="detail-header">
+        <view class="detail-title">
+            {{item.title}} {{item.original_title}}({{item.year}})
+        </view>
+        <view class="detail-content">
+            <view class="detail-left">
+                <view class="detail-rate">
+                    <stars 
+                        rate="{{item.rating.value}}"
+                        starsize="30"
+                        fontsize="30"
+                        fontcolor="#595959"
+                    ></stars>
+                    <text class="comment-persons">{{item.rating.count}}人评价</text>
+                </view>
+                <view class="detail-sub-item">
+                    <view class="detail-time">
+                        <text>{{item.durations[0]}} {{item.genres}}</text>
+                    </view>
+                    <view class="detail-show">
+                        <text>{{item.pubdate[0]}}上映 {{item.countries[0]}}</text>
+                    </view>
+                    <view class="detail-actors">
+                        <text>{{item.authors}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="detail-right">
+                <image class="image" src="{{item.cover.image.small.url}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="detail-tag">
+        <view class="detail-tag-title">
+            <text>豆瓣成员常用标签</text>
+        </view>
+        <view class="detail-tag-content">
+            <text class="text" wx:for="{{item.tags}}" wx:key="index">{{item.name}}</text>
+        </view>
+    </view>
+    <view class="detail-comment">
+        <view class="detail-comment-title">
+            <text class="text">短评({{commentTotal}})</text>
+        </view>
+        <comment 
+            wx:for="{{comments}}" 
+            wx:key="index"
+            item="{{item}}"
+        ></comment>
+        
+    </view>
+    <navigator 
+        class="more-comment" 
+        url="/pages/comments/comments?id={{id}}&type={{type}}&thumbnail={{item.cover.image.small.url}}&title={{item.title}}&rate={{item.rating.value}}"
+    >查看更多精彩短评</navigator>
+</view>

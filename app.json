@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/comments/comments",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/lists/lists",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#41be57",
+    "navigationBarTitleText": "OKOK电影评分",
+    "navigationBarTextStyle":"white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

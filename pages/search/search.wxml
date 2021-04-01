@@ -1,0 +1,35 @@
+<searchBar bindsearchInput="searchInput"></searchBar>
+<view class="history-wrapper" wx:if="{{history && !subjects}}">
+    <view class="history-title">
+        <view class="title">历史记录</view>
+        <view class="clear" bindtap="onClearEvent">清除</view>
+    </view>
+    <navigator 
+        class="history-group"
+        wx:for="{{history}}"
+        wx:key="index"
+        url='/pages/detail/detail?type=movie&id={{item.id}}'
+    >{{item.title}}</navigator>
+</view>
+<view class="search-wrapper">
+    <view 
+        class="search" 
+        wx:for="{{subjects}}" 
+        wx:key="index"
+        bindtap="onItemTapEvent"
+        data-id="{{item.id}}"
+        data-title="{{item.title}}"
+    >
+        <view class="search-image">
+            <image class="image" src="{{item.pic.normal}}"></image>
+        </view>
+        <view class="search-content">
+            <view class="search-title">
+                {{item.title}}
+            </view>
+            <view class="rate-year">
+                {{item.rating.value}}分/{{item.year}}
+            </view>
+        </view>
+    </view>
+</view>

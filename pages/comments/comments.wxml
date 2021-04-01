@@ -1,0 +1,33 @@
+<view class="comment-wrapper">
+    <view class="comment-group" bindtap="onCommentEvent">
+        <view class="comment-image">
+            <image class="image" src="{{thumbnail}}"></image>
+        </view>
+        <view class="comment-title">
+            {{title}}
+        </view>
+        <view class="comment-rate">
+            {{rate}}分
+        </view>
+    </view>
+    <view class="comment-content">
+        <view class="comment-content-title">
+            全部影评({{totalComment}})
+        </view>
+        <comment wx:for="{{comments}}" wx:key="index" item="{{item}}"></comment>
+    </view>
+    <view class="comment-btn-wrapper">
+        <button 
+            class="comment-btn"
+            bindtap="onPrePageEvent"
+            disabled="{{start <= 1}}"
+            loading="{{prePage}}"
+        >上一页</button>
+        <button 
+            class="comment-btn"
+            bindtap="onNextPageEvent"
+            disabled="{{start >= totalComment}}"
+            loading="{{nextPage}}"
+        >下一页</button>
+    </view>
+</view>

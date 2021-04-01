@@ -1,0 +1,16 @@
+<view class="container-index">
+  <view class="content-wrap">
+    <view class="content-top">
+      <view class="content-left">{{title}}</view>
+      <navigator class="content-right" url="{{moduleUrl}}">更多</navigator>
+    </view>
+    <scroll-view class="content" scroll-x="{{true}}">
+      <itemViews 
+        wx:for="{{items}}" 
+        wx:key="index" 
+        item="{{item}}" 
+        itemUrl="/pages/detail/detail?type={{type}}&id={{item.id}}"
+      ></itemViews>
+    </scroll-view>
+  </view>
+</view>

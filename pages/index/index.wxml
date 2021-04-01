@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<searchBar isNavigator="{{true}}"></searchBar>
+<!-- 电影模块 -->
+<indexModule 
+    title="电影" 
+    items="{{movies}}" 
+    moduleUrl="/pages/lists/lists?type=movie"
+    type="movie"
+></indexModule>
+<!-- 电视剧模块 -->
+<indexModule 
+    title="电视剧" 
+    items="{{tvs}}" 
+    moduleUrl="/pages/lists/lists?type=tv"
+    type="tv"
+></indexModule>
+<!-- 综艺模块 -->
+<indexModule 
+    title="综艺" 
+    items="{{shows}}" 
+    moduleUrl="/pages/lists/lists?type=show"
+    type="show"
+></indexModule>

@@ -1,0 +1,50 @@
+.search-wrapper{
+    padding:20rpx 30rpx;
+}
+
+.search{
+    display:flex;
+    padding:10rpx 0;
+    border-bottom:1px solid #e4e4e4;
+}
+
+.search .search-image .image{
+    width:80rpx;
+    height:100rpx;
+    margin-right:20rpx;
+}
+
+.search-content{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-content .search-title{
+    font-size:32rpx;
+}
+
+.search-content .rate-year{
+    font-size:28rpx;
+    color: #7b7b7b;
+}
+
+.history-wrapper{
+    padding:10rpx 20rpx;
+}
+
+.history-wrapper .history-title{
+    display:flex;
+    justify-content: space-between;
+    padding:20rpx 0;
+    background: #f9f9f9;
+    font-size: 28rpx;
+    color: #9e9e9e;
+}
+
+.history-group{
+    font-size:32rpx;
+    padding:20rpx 0;
+    border-bottom: 1px solid #e4e4e4;
+}
